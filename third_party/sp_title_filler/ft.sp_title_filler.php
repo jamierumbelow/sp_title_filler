@@ -20,6 +20,7 @@ class Sp_title_filler_ft extends EE_Fieldtype {
 		'version'		=> '1.0.0',
 		'description'	=> 'Because sometimes you just don\'t nEEd a title'
 	);
+	public $data = array();
 	
 	/* --------------------------------------------------------------
 	 * GENERIC METHODS
@@ -47,7 +48,7 @@ class Sp_title_filler_ft extends EE_Fieldtype {
 			
 			return $this->EE->load->view('cp', $this->data, TRUE);
 		} else {
-			return '';
+			return $this->EE->load->view('hider', $this->data, TRUE);
 		}
 	}
 	
